@@ -1,0 +1,35 @@
+{
+  "title": "Application Prototype",
+  "target_users": [
+    "Business Users",
+    "Operators"
+  ],
+  "architecture_tier": "PROTOTYPE",
+  "entities": {
+    "Item": [
+      "id",
+      "title",
+      "category",
+      "status",
+      "createdAt",
+      "updatedAt"
+    ],
+    "ActivityLog": [
+      "id",
+      "action",
+      "entityId",
+      "timestamp",
+      "user"
+    ]
+  },
+  "workflows": [
+    "View primary dashboard",
+    "Filter and search records",
+    "Create and update entries"
+  ],
+  "active_features": [
+    "Interactive Dashboard",
+    "Realistic Seed Data",
+    "Filter & Search Engine"
+  ]
+}

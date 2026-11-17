@@ -1,0 +1,25 @@
+{
+  "changes_required": "Refactor the module cards to be positioned in a circular/orbital pattern around the central checkmark icon. Replace the absolute positioning with a radial arrangement where cards are placed at specific angles around the center. Add CSS animations for continuous clockwise rotation/animation effects on the entire orbital container, while keeping cards upright (counter-rotating if needed). Enhance the connecting lines to properly connect from cards to the center. Add subtle floating animations for visual appeal.",
+  "current_state": "The CorePlatformSection.jsx exists with 5 module cards (Scrum Board, Financials, Analytics, Ticket System, Project Management) positioned absolutely in various spots on the canvas. There's a central CheckCircle badge and SVG connection lines. The current implementation has cards statically positioned with hover scale effects, but no continuous orbital/clockwise animation. The reference mockup shows a specific layout where cards orbit clockwise around a central circular element.",
+  "objective": "Update the Core Platform section to have module cards arranged in a clockwise circular/orbital pattern around the central checkmark icon with smooth animations. The cards should appear to orbit or float in a circular clockwise motion, similar to the reference design showing cards connected by dashed lines radiating from a central point.",
+  "tasks": [
+    {
+      "action": "edit",
+      "description": "Refactor the core platform section with orbital layout: 1) Place the central checkmark circle as the rotation center point, 2) Position module cards at specific angles around the center using polar coordinates (0\u00b0, 72\u00b0, 144\u00b0, 216\u00b0, 288\u00b0 spacing), 3) Add CSS keyframes for continuous clockwise rotation on the orbital container, 4) Add counter-rotation on cards to keep them upright, 5) Update SVG connection lines to be proper ellipse arcs connecting cards to center, 6) Add floating/bobbing animation effects to cards, 7) Increase card contrast with proper drop shadows and border styling matching the warm theme colors.",
+      "file": "src/components/CorePlatformSection.jsx",
+      "task_id": 1
+    },
+    {
+      "action": "edit",
+      "description": "Add CSS keyframe animations for: orbit-clockwise (360deg rotation for the orbital container), float-card (subtle Y-axis bobbing for each card), and glow-pulse (for the central checkmark). These use the existing animation utilities pattern already in the file.",
+      "file": "src/index.css",
+      "task_id": 2
+    },
+    {
+      "action": "verify",
+      "description": "Verify the build compiles successfully and the Core Platform section displays the module cards in a clockwise orbital animation around the central checkmark icon.",
+      "file": "build_verification",
+      "task_id": 3
+    }
+  ]
+}
